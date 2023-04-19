@@ -43,7 +43,7 @@ app.get('/big/promises', async (req, res) => {
     const name = uuidv4()
     console.time('big/promises'+name)
 
-    const data = await fs.promises.readFile('./rotten_tomatoes_movie_reviews.csv')
+    const data = hy('./rotten_tomatoes_movie_reviews.csv')
 
     for (let i = 0; i < k; i++) {
         await fs.promises.writeFile(`./${name}_${i}.csv`, data)
